@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabajo en Clase 2</title>
+    <script src="Funciones.js"></script>
+</head>
+
+<body>
+    <form>
+        <fieldset>
+            <legend> 1. Grados Centigrados a grados Fahrenheint</legend>
+            <label for="gradosC">Ingrese un valor en grados centigrados</label>
+            <input type="text" value="0" id="gradosC" name="gradosC"><br />
+        </fieldset>
+        <input type="button" value="Convertir a Fahrenheint" name="convertir"
+            onclick="convertirGradosCentigradosAGradosFahrenheit(parseFloat(document.getElementById('gradosC').value))"><br />
+        <span id="spanGrados"></span><br />
+        <span id="span2"></span> <br />
+    </form>
+
+    <form>
+        <fieldset>
+            <legend> 2. Calculo Porcentajes</legend>
+            <label for="num1">Ingrese un valor</label>
+            <input type="text" value="0" id="num1" name="num1"><br />
+        </fieldset>
+        <input type="button" value="Calcular" name="calc"
+            onclick="calcularPorcentajes(parseFloat(document.getElementById('num1').value))"><br />
+        <span id="spanRes"></span><br />
+    </form>
+
+    <form>
+        <fieldset>
+            <legend> 3. Generar Tablas</legend>
+            <label for="numFilas">Ingrese un valor para las filas</label>
+            <input type="text" value="0" id="numFilas" name="numFilas"><br />
+            <label for="numColum">Ingrese un valor para las columnas</label>
+            <input type="text" value="0" id="numColum" name="numColum"><br />
+        </fieldset>
+        <input type="button" value="Generar Tabla" name="genTabl" onclick="generarTablaHTML(
+                parseInt(document.getElementById('numFilas').value),
+                parseInt(document.getElementById('numColum').value))"><br />
+        <table id="espacioTabla" border="2"></table>
+    </form>
+</body>
+
+</html>
